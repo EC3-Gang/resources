@@ -214,7 +214,7 @@ $$
 \text{B}_{2} = \underbrace{b_n b_{n-1} \ldots b_2 b_1 b_0}_{\text{Binary representation}}
 $$
 
-The binary digits ($b_i$) are given by (you should know how to convert them by yourself btw and if you don't consider scrolling up):
+The binary digits ($b_i$) are given by (cabrón if you don't know consider scrolling up):
 
 $$
 b_i = \begin{cases} 
