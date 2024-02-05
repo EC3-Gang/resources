@@ -2,7 +2,7 @@
 title: Base64
 ---
 
-# Base64
+# Base64 (Encoding)
 Base64 is an encoding method based on the base-64 number system that uses an alphabet of 64 digits, each of which represents a different combination of 6 bits ($2^6$). It is commonly used in computing to represent binary data in a human-readable format. 
 
 Base64 encoding is used in various scenarios, such as encoding binary data in email attachments, embedding images in HTML, and storing complex data in URLs (otherwise known as [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)).
