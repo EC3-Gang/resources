@@ -9,7 +9,7 @@ Binary is a base-2 number system that uses only two digits: 0 and 1, and are use
 These binary digits are combined to represent numerical values and form the basis for encoding complex information within computers. Understanding how to convert between decimal (base-10) and binary is crucial for working with low-level data and programming.
 
 
-## Conversion from decimal
+## Conversion from Decimal
 
 Here's some math explaining the rough idea behind converting a decimal number to binary:
 
@@ -214,28 +214,7 @@ $$
 \text{B}_{2} = \underbrace{b_n b_{n-1} \ldots b_2 b_1 b_0}_{\text{Binary representation}}
 $$
 
-The binary digits ($b_i$) are given by (cabrón if you don't know consider scrolling up):
-
-$$
-b_i = \begin{cases} 
-0000 & \text{if } x_i = 0 \\
-0001 & \text{if } x_i = 1 \\
-0010 & \text{if } x_i = 2 \\
-0011 & \text{if } x_i = 3 \\
-0100 & \text{if } x_i = 4 \\
-0101 & \text{if } x_i = 5 \\
-0110 & \text{if } x_i = 6 \\
-0111 & \text{if } x_i = 7 \\
-1000 & \text{if } x_i = 8 \\
-1001 & \text{if } x_i = 9 \\
-1010 & \text{if } x_i = A \\
-1011 & \text{if } x_i = B \\
-1100 & \text{if } x_i = C \\
-1101 & \text{if } x_i = D \\
-1110 & \text{if } x_i = E \\
-1111 & \text{if } x_i = F \\
-\end{cases}
-$$
+Refer to the [Conversion Table](/misc/bases/conv-table.html) page for the hexadecimal to binary conversion table.
 
 So let's say you wanted to convert $420F$ to binary:
 

@@ -6,11 +6,25 @@ title: Decimal
 
 Decimal is a base-10 number system that uses ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. It is the most commonly used number system in everyday life. In the decimal system, each digit represents powers of 10.
 
+Each digit takes up 3.32 bits.
+
 ## Conversion
 
 Converting to decimal from other bases involves multiplying each digit by the base raised to the power of its position and then summing the results.
 
 ### From Binary
+
+The rough logic for converting a binary number to decimal is as follows:
+
+$$
+\begin{align*}
+\text{Let } b &= \text{the binary number to convert} \\
+\text{Let } \text{decimal} &= 0 \\
+\text{For } i &= 0 \text{ to } \text{length of } b - 1 \\
+\text{decimal} &+= \mathrm{b_i} \times 2^i \\
+\text{Return } \text{decimal}
+\end{align*}
+$$
 
 ::: code-group
 
@@ -78,6 +92,17 @@ fn main() {
 
 ### From Octal
 
+$$
+\begin{align*}
+\text{Let } o &= \text{the octal number to convert} \\
+\text{Let } \text{decimal} &= 0 \\
+\text{For } i &= 0 \text{ to } \text{length of } o - 1 \\
+\text{decimal} &+= \mathrm{o_i} \times 8^i \\
+\text{Return } \text{decimal}
+\end{align*}
+$$
+
+
 ::: code-group
 
 ```python
@@ -142,6 +167,20 @@ fn main() {
 
 
 ### From Hexadecimal
+
+$$
+\begin{align*}
+\text{Let } h &= \text{the hexadecimal number to convert} \\
+\text{Let } \text{decimal} &= 0 \\
+\text{For } i &= 0 \text{ to } \text{length of } h - 1 \\
+\text{If } \mathrm{h_i} &\text{ is a digit} \\
+\text{decimal} &+= \mathrm{h_i} \times 16^i \\
+\text{Else} \\
+\text{decimal} &+= (\mathrm{h_i} - 55) \times 16^i \\
+\text{Return } \text{decimal}
+\end{align*}
+$$
+
 
 ::: code-group
 
