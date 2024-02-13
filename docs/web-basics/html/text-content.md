@@ -179,6 +179,18 @@ Links are used to create hyperlinks to other web pages, files, or resources. The
 <a href="https://www.example.com">Visit Example.com</a>
 ```
 
+The `<a>` element can also be used to create links to other sections of the same page using the `id` attribute:
+
+```html
+<a href="#section2">Go to Section 2</a>
+```
+
+It also has another attribute called `target` which is used to specify where to open the linked document:
+
+```html
+<a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a>
+```
+
 ## Quotations
 
 Quotations are used to indicate that a block of text is a quotation. There are two types of quotations in HTML: block quotations and inline quotations.
