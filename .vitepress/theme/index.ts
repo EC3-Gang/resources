@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import CodePreview from './CodePreview.vue'
 import Layout from './Layout.vue'
 import './style.css'
 
@@ -10,5 +11,6 @@ export default {
   Layout: Layout,
   enhanceApp({ app, router, siteData }) {
     // ...
+		app.component('code-preview', CodePreview)
   }
 } satisfies Theme

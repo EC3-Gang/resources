@@ -15,7 +15,7 @@ features:
     link: /competitive-programming/
   - title: Web Development (Basic)
     details: Learn the basics of Web Development with these resources!
-    link: /web-development-basic/
+    link: /web-basics/
   - title: Miscellaneous
     details: A collection of resources that don't fit into the other categories!
     link: /misc/
