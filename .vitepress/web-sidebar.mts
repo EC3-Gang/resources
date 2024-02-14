@@ -29,6 +29,11 @@ export default [
 			{ text: 'Selectors', link: '/web-basics/css/selectors' },
 			{ text: 'Box Model', link: '/web-basics/css/box-model' },
 			{ text: 'Units', link: '/web-basics/css/units' },
+			{ text: 'Colors', link: '/web-basics/css/colors' },
+			{ text: 'Text', link: '/web-basics/css/text' },
+			{ text: 'Backgrounds', link: '/web-basics/css/backgrounds' },
+			{ text: 'Flexbox', link: '/web-basics/css/flexbox' },
+			{ text: 'Grid', link: '/web-basics/css/grid' },
 		]
 	}
 ]
