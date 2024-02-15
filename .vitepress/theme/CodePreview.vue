@@ -15,5 +15,5 @@ onMounted(() => {
 		<slot />
 	</div>
 	<h4>Preview:</h4>
-	<iframe v-if="iframeContent" :srcdoc="iframeContent" />
+	<iframe v-if="iframeContent" :srcdoc="iframeContent" style="width: 100%; height: 20em" />
 </template>

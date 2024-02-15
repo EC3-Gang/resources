@@ -23,6 +23,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.23.10",
     "base32": "^0.0.7",
     "hi-base32": "^0.5.1",
     "vue": "^3.4.15"
