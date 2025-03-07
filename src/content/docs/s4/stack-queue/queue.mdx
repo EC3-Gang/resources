@@ -1,0 +1,127 @@
+---
+title: Queue
+description: Introduction to the queue data structure.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+A queue is a linear data structure that follows the First In First Out (FIFO) principle. This means that the first element added to the queue is the first element to be removed. Queues are used in many applications, such as task scheduling, breadth-first search, and printer queues.
+
+## Operations
+
+A queue supports the following operations:
+
+- `enqueue(item)`: Adds an item to the back of the queue.
+- `dequeue()`: Removes and returns the item at the front of the queue.
+- `peek()`: Returns the item at the front of the queue without removing it.
+- `is_empty()`: Returns `True` if the queue is empty, `False` otherwise.
+- `size()`: Returns the number of items in the queue.
+
+## Implementation
+
+A queue can be implemented using an array or a linked list:
+
+<Tabs>
+  <TabItem label="Array">
+
+  ```python
+  class Queue:
+      def __init__(self):
+          self.items = []
+
+      def enqueue(self, item):
+          self.items.append(item)
+
+      def dequeue(self):
+          if not self.is_empty():
+              return self.items.pop(0)
+
+      def peek(self):
+          if not self.is_empty():
+              return self.items[0]
+
+      def is_empty(self):
+          return len(self.items) == 0
+
+      def size(self):
+          return len(self.items)
+  ```
+
+  </TabItem>
+  <TabItem label="LinkedList">
+  
+  ```python
+  class Node:
+      def __init__(self, data):
+          self.data = data
+          self.next = None
+          
+  class Queue:
+      def __init__(self):
+          self.front = None
+          self.rear = None
+          
+      def enqueue(self, item):
+          new_node = Node(item)
+          if self.is_empty():
+              self.front = new_node
+              self.rear = new_node
+          else:
+              self.rear.next = new_node
+              self.rear = new_node
+              
+      def dequeue(self):
+          if not self.is_empty():
+              item = self.front.data
+              self.front = self.front.next
+              if self.front is None:
+                  self.rear = None
+              return item
+          else:
+              raise IndexError("dequeue from an empty queue")
+          
+      def peek(self):
+          if not self.is_empty():
+              return self.front.data
+          else:
+              raise IndexError("peek from an empty queue")
+          
+      def is_empty(self):
+          return self.front is None
+          
+      def size(self):
+          count = 0
+          current = self.front
+          while current is not None:
+              count += 1
+              current = current.next
+          return count
+  ```
+
+  </TabItem>
+</Tabs>
+
+## Example
+
+Here is an example of using a queue to implement a breadth-first search algorithm:
+
+```python
+def bfs(graph, start):
+    visited = set()
+    queue = Queue()
+    queue.enqueue(start)
+    visited.add(start)
+    
+    while not queue.is_empty():
+        node = queue.dequeue()
+        print(node)
+        
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                queue.enqueue(neighbor)
+                visited.add(neighbor)
+```
+
+In this example, `graph` is a dictionary representing an adjacency list, and `start` is the starting node for the breadth-first search. The `bfs` function uses a queue to traverse the graph in a breadth-first manner, visiting all nodes reachable from the starting node.
+
+Queues are a fundamental data structure in computer science and are used in many algorithms and applications. Understanding how queues work and how to implement them is an important skill for any programmer.

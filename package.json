@@ -7,11 +7,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "biome check"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.32.2",
     "astro": "^5.1.5",
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.5",
+    "starlight-sidebar-topics": "^0.5.0",
+    "starlight-theme-rapide": "^0.4.0"
+  },
+  "packageManager": "yarn@4.7.0",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
   }
 }
